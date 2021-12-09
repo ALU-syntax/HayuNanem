@@ -17,6 +17,7 @@
             android:text="Register"
             android:textColor="@color/white"
             android:textSize="45sp"
+            android:textStyle="bold"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="80dp"
             />
@@ -24,16 +25,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Name :"
+            android:fontFamily="serif"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:layout_marginTop="40dp"
             android:layout_marginLeft="50dp"
             />
         <EditText
+            android:id="@+id/ed_nama"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="masukkan nama"
             android:padding="15dp"
+            android:textColor="@color/black"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/shape_edit_text"
             />
@@ -41,17 +45,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email :"
+            android:fontFamily="serif"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="50dp"
             />
         <EditText
+            android:id="@+id/ed_email"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="masukkan email"
             android:padding="15dp"
             android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
             android:background="@drawable/shape_edit_text"
             />
         <TextView
@@ -59,13 +66,16 @@
             android:layout_height="wrap_content"
             android:text="Number Phone :"
             android:textSize="20sp"
+            android:fontFamily="serif"
             android:textColor="@color/white"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="50dp"/>
         <EditText
+            android:id="@+id/ed_nmbr_phone"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="masukkan number phone"
+            android:textColor="@color/black"
             android:padding="15dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/shape_edit_text"
@@ -74,20 +84,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Password :"
+            android:fontFamily="serif"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="50dp"
             />
         <EditText
+            android:id="@+id/ed_pass"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:hint="masukkan password"
             android:padding="15dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/shape_edit_text"
             />
         <Button
+            android:id="@+id/btn_regist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="REGISTER"
