@@ -54,7 +54,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/potongan_RW"
+                android:src="@drawable/potongan_rw"
                 />
             <TextView
                 android:layout_width="match_parent"

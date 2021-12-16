@@ -15,6 +15,9 @@ public class MarketListFragment extends Fragment {
 
     private View view;
 
+    public MarketListFragment() {
+    }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

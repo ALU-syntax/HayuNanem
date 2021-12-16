@@ -9,7 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.Kelompok1.android.hayunanem.R;
+
 public class ReminderFragment extends Fragment {
+
+    private View view;
+
+    public ReminderFragment() {
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -20,6 +27,7 @@ public class ReminderFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        view = inflater.inflate(R.layout.fragment_reminder, container, false);
+        return view;
     }
 }
