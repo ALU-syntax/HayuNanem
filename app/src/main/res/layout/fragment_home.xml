@@ -15,12 +15,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:contentDescription="To Show Navigation Drawer"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_baseline_menu_24"
-            android:layout_margin="10dp"/>
 
 
     </LinearLayout>
