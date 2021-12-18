@@ -40,16 +40,16 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Intent intent = null;
-            switch (item){
-                case 0:
-                    intent = new Intent(this, );
+            switch (item.getItemId()){
+                case R.id.nav_acc:
+                    intent = new Intent(MainActivity.this, AccountActivity.class);
                     break;
 
-                case 1:
-                    intent = new Intent(this, );
+                case R.id.nav_apps_info:
+                    intent = new Intent(MainActivity.this, ApplicationInformationActivity.class);
                     break;
 
-                case 2:
+                case R.id.nav_logout:
                     intent = new Intent(MainActivity.this, LoginActivity.class);
 
                 default:
