@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "108241444811",
+    "project_id": "hayunanem",
+    "storage_bucket": "hayunanem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108241444811:android:6815d83b46be39ca49e04e",
+        "android_client_info": {
+          "package_name": "com.Kelompok1.android.hayunanem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108241444811-kfrh70biqdfbkgtn7mtdmrtm85on1rv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4PMgRmbNlKGmW5l7GORMd_ealN_wqewY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108241444811-kfrh70biqdfbkgtn7mtdmrtm85on1rv4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
