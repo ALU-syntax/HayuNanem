@@ -3,5 +3,8 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
+    <string-array name="Jenis_Tanaman">
+        <item>Kangkung</item>
+        <item>Sawi</item>
+    </string-array>
 </resources>

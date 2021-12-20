@@ -46,12 +46,15 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.21927083333333333" />
         <entry key="app/src/main/res/layout/activity_panduan.xml" value="0.21927083333333333" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_riwayat_panen.xml" value="0.21927083333333333" />
         <entry key="app/src/main/res/layout/activity_set_up.xml" value="0.21927083333333333" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_tambah_tanaman.xml" value="0.21927083333333333" />
         <entry key="app/src/main/res/layout/content_market.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_list_market.xml" value="0.21927083333333333" />
         <entry key="app/src/main/res/layout/fragment_reminder.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/spinner_item.xml" value="0.21927083333333333" />
         <entry key="app/src/main/res/menu/item_navbar.xml" value="0.21927083333333333" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.18055555555555555" />
       </map>

@@ -1,6 +1,8 @@
 package com.Kelompok1.android.hayunanem.Fragment;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.net.wifi.ScanResult;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -42,6 +44,7 @@ public class HomeFragment extends Fragment {
     private Button btnNavdraw;
     private FirebaseAuth mAuth;
     private FirebaseFirestore firestore;
+    private String Uid;
 
     public HomeFragment() {
 
@@ -53,6 +56,22 @@ public class HomeFragment extends Fragment {
 
         mAuth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
+        Uid = mAuth.getCurrentUser().getUid();
+
+        firestore.collection("Users").document(Uid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()){
+                    if (task.getResult().exists()){
+                        String name = task.getResult().getString("Nama");
+
+                        txtName.setText("Halo! " + name );
+                        txtName.setTextColor(Color.parseColor("#FFFFFF"));
+
+                    }
+                }
+            }
+        });
 
     }
 
@@ -60,6 +79,7 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        txtName = view.findViewById(R.id.txt_nama);
         btnLogout = view.findViewById(R.id.btn_logout);
         btnAccount = view.findViewById(R.id.btn_Account);
         btnInformation = view.findViewById(R.id.btn_information);

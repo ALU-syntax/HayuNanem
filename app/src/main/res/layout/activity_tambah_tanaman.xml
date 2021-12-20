@@ -15,6 +15,7 @@
             android:layout_height="wrap_content"
             android:text="Tambah Tanaman"
             android:textSize="40dp"
+            android:fontFamily="sans-serif-black"
             android:gravity="center"
             android:layout_marginTop="90dp"
             android:textColor="@color/white"
@@ -23,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hayu Nanem"
+            android:fontFamily="sans-serif-black"
             android:textSize="40dp"
             android:textColor="@color/white"
             android:gravity="center"/>
@@ -35,46 +37,55 @@
             android:layout_marginTop="60dp"
             android:layout_marginLeft="55dp"/>
         <EditText
+            android:id="@+id/ed_nama_tanaman"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:background="@drawable/shape_edit_text"
             android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
             android:hint="Nama Tanaman"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Awal Tanam:"
+            android:text="Jenis Tanaman"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="55dp"/>
-        <EditText
+        <Spinner
+            android:id="@+id/sp_jenis_tanaman"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:background="@drawable/shape_edit_text"
-            android:padding="15dp"
-            android:hint="Awal Tanam"/>
+            android:padding="15dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Waktu Panen:"
+            android:text="Awal Tanam "
             android:textColor="@color/white"
             android:textSize="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="55dp"/>
         <EditText
+            android:id="@+id/ed_tanggal_tanam"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:background="@drawable/shape_edit_text"
             android:padding="15dp"
-            android:hint="Waktu Panen"/>
+            android:inputType="date"
+            android:focusable="false"
+            android:hint="12 Januari 2021"
+            android:textColorHint="@android:color/darker_gray"/>
         <Button
+            android:id="@+id/btn_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -82,6 +93,6 @@
             android:backgroundTint="@color/Button"
             android:textSize="25dp"
             android:hint="Submit"
-            android:textColor="@color/white"/>
+            android:textColorHint="@color/white" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
