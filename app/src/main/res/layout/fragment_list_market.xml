@@ -28,15 +28,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/img_market1"
+                <ImageButton
+                    android:id="@+id/btnImg_market1"
                     android:layout_width="180dp"
                     android:layout_height="120dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
+                    android:onClick="kabayan"
                     android:src="@drawable/warung"
+                    android:scaleType="centerInside"
                     />
 
                 <TextView
@@ -47,14 +49,14 @@
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    android:layout_toRightOf="@id/img_market1"
+                    android:layout_toRightOf="@id/btnImg_market1"
                     android:layout_margin="10dp"/>
 
                 <TextView
                     android:id="@+id/txt_address1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/img_market1"
+                    android:layout_toRightOf="@+id/btnImg_market1"
                     android:layout_below="@+id/txt_market_name1"
                     android:layout_marginLeft="10dp"
                     android:text="Jl. Kenangan Bersama"/>
@@ -63,7 +65,7 @@
                     android:id="@+id/txt_phone1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/img_market1"
+                    android:layout_toRightOf="@+id/btnImg_market1"
                     android:layout_below="@+id/txt_address1"
                     android:layout_margin="10dp"
                     android:text="0888888888"/>
@@ -83,15 +85,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/img_market2"
+            <ImageButton
+                android:id="@+id/btnImg_market2"
                 android:layout_width="180dp"
                 android:layout_height="120dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
+                android:onClick="bahari"
                 android:src="@drawable/warteg"
+                android:scaleType="centerInside"
                 />
 
             <TextView
@@ -102,14 +106,14 @@
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:layout_toRightOf="@id/img_market2"
+                android:layout_toRightOf="@id/btnImg_market2"
                 android:layout_margin="10dp"/>
 
             <TextView
                 android:id="@+id/txt_address2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/img_market2"
+                android:layout_toRightOf="@+id/btnImg_market2"
                 android:layout_below="@+id/txt_market_name2"
                 android:layout_marginLeft="10dp"
                 android:text="Jl. Kenangan Bersama"/>
@@ -118,7 +122,7 @@
                 android:id="@+id/txt_phone2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/img_market2"
+                android:layout_toRightOf="@+id/btnImg_market2"
                 android:layout_below="@+id/txt_address2"
                 android:layout_margin="10dp"
                 android:text="0888888888"/>
@@ -138,15 +142,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/img_market3"
+            <ImageButton
+                android:id="@+id/btnImg_market3"
                 android:layout_width="180dp"
                 android:layout_height="120dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/bakso"/>
+                android:onClick="budjangan"
+                android:src="@drawable/bakso"
+                android:scaleType="centerInside"/>
 
             <TextView
                 android:id="@+id/txt_market_name3"
@@ -156,14 +162,14 @@
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:layout_toRightOf="@id/img_market3"
+                android:layout_toRightOf="@id/btnImg_market3"
                 android:layout_margin="10dp"/>
 
             <TextView
                 android:id="@+id/txt_address3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/img_market3"
+                android:layout_toRightOf="@+id/btnImg_market3"
                 android:layout_below="@+id/txt_market_name3"
                 android:layout_marginLeft="10dp"
                 android:text="Jl. Kenangan Bersama"/>
@@ -172,7 +178,7 @@
                 android:id="@+id/txt_phone3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/img_market3"
+                android:layout_toRightOf="@+id/btnImg_market3"
                 android:layout_below="@+id/txt_address3"
                 android:layout_margin="10dp"
                 android:text="0888888888"/>
