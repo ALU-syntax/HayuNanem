@@ -6,12 +6,14 @@
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/drawable/button_shape.xml" value="0.2703125" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2703125" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/drawable/popup_background.xml" value="0.2703125" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/drawable/shape_account.xml" value="0.25625" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/drawable/shape_application_information.xml" value="0.2703125" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/drawable/shape_calendar.xml" value="0.2703125" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/drawable/shape_cardview.xml" value="0.2703125" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/drawable/shape_edit_text.xml" value="0.2703125" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/drawable/shape_management.xml" value="0.2703125" />
+        <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/layout/acivity_popup_bakso.xml" value="0.536" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/layout/activity_account.xml" value="0.264" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/layout/activity_information_application.xml" value="0.264" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/layout/activity_list_market.xml" value="0.4" />
@@ -19,7 +21,8 @@
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/layout/activity_main.xml" value="0.1598731884057971" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/layout/activity_management_penanaman.xml" value="0.4" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/layout/activity_panduan.xml" value="0.1529051987767584" />
-        <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/layout/activity_popup_warteg.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/layout/activity_popup_warteg.xml" value="0.4" />
+        <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/layout/activity_popup_warung.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/layout/activity_riwayat_panen.xml" value="0.264" />
         <entry key="..\:/Users/husen/Documents/GitHub/HayuNanem/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />

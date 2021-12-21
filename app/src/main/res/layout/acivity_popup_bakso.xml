@@ -1,46 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="350dp"
     android:layout_height="400dp"
     android:layout_gravity="center"
     android:elevation="30dp"
     android:background="@drawable/popup_background">
-
     <ImageView
         android:id="@+id/img_warteg"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:src="@drawable/warteg"/>
-        <TextView
-            android:id="@+id/txt_warteg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Warteg Mang Uyah"
-            android:layout_below="@+id/img_warteg"
-            android:textColor="@color/black"
-            android:gravity="center"
-            android:textSize="25dp"/>
+        android:src="@drawable/bakso"/>
     <TextView
-        android:id="@+id/txt_kebutuhan_1"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt_warteg"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kebutuhan : Kangkung 1kg per-Hari"
-        android:layout_below="@+id/txt_warteg"
-        android:textSize="10dp"
+        android:text="Warteg Mang Uyah"
+        android:layout_below="@+id/img_warteg"
         android:textColor="@color/black"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        />
+        android:gravity="center"
+        android:textSize="25dp"/>
     <TextView
         android:id="@+id/txt_kebutuhan_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Kebutuhan : Sawi 2kg per-Hari"
-        android:layout_below="@+id/txt_kebutuhan_1"
+        android:layout_below="@+id/txt_warteg"
         android:textSize="10dp"
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
@@ -61,7 +48,7 @@
         android:id="@+id/jln_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alamat : Jalan Kebagusan No 80"
+        android:text="Alamat : Jalan Kebagusan No 81"
         android:layout_below="@+id/kebutuhan_3"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
