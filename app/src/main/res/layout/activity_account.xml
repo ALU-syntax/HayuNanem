@@ -36,17 +36,17 @@
             android:layout_marginLeft="30dp"
             android:layout_below="@+id/txt_1"
             />
+
         <EditText
-            android:id="@+id/ed_nama"
+            android:id="@+id/ed_nama_profile"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:hint="masukkan nama"
-            android:padding="10dp"
-            android:textColor="@color/black"
+            android:layout_below="@+id/txt_2"
             android:layout_centerHorizontal="true"
             android:background="@drawable/shape_edit_text"
-            android:layout_below="@+id/txt_2"
-            />
+            android:hint="masukkan nama"
+            android:padding="10dp"
+            android:textColor="@color/black" />
         <TextView
             android:id="@+id/txt_3"
             android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
             android:textSize="18sp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="30dp"
-            android:layout_below="@+id/ed_nama"
+            android:layout_below="@+id/ed_nama_profile"
             />
         <EditText
             android:id="@+id/ed_email"
@@ -72,72 +72,53 @@
             />
 
         <TextView
-            android:id="@+id/txt_4"
+            android:id="@+id/txt_alamat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ed_email"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="serif"
-            android:text="Number Phone :"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-        <EditText
-            android:id="@+id/ed_nmbr_phone"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:hint="masukkan number phone"
-            android:textColor="@color/black"
-            android:padding="10dp"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/shape_edit_text"
-            android:layout_below="@+id/txt_4"
-            />
-        <TextView
-            android:id="@+id/txt_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Password :"
-            android:fontFamily="serif"
-            android:textColor="@color/black"
+            android:text="Address :"
             android:textSize="18sp"
+            android:fontFamily="serif"
+            android:textColor="@color/black"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="30dp"
-            android:layout_below="@+id/ed_nmbr_phone"
-            />
+            android:layout_below="@+id/ed_email"/>
+
         <EditText
-            android:id="@+id/ed_pass"
+            android:id="@+id/ed_address"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:hint="masukkan password"
-            android:padding="10dp"
-            android:layout_centerHorizontal="true"
+            android:layout_height="140dp"
+            android:layout_gravity="center_horizontal"
             android:background="@drawable/shape_edit_text"
-            android:layout_below="@+id/txt_5"
-            />
+            android:gravity="start"
+            android:layout_marginLeft="30dp"
+            android:hint="masukkan Alamat"
+            android:inputType="textMultiLine"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:layout_below="@+id/txt_alamat"/>
+
         <Button
             android:id="@+id/btn_change_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit"
-            android:textSize="20dp"
-            android:backgroundTint="@color/Button"
-            android:layout_marginTop="35dp"
-            android:layout_below="@+id/ed_pass"
+            android:layout_below="@+id/ed_address"
             android:layout_marginLeft="30dp"
-            />
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/Button"
+            android:text="Submit"
+            android:textSize="20dp" />
+
         <Button
             android:id="@+id/btn_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancel"
-            android:textSize="20dp"
-            android:backgroundTint="@color/Button"
-            android:layout_marginTop="35dp"
-            android:layout_below="@+id/ed_pass"
+            android:layout_below="@+id/ed_address"
             android:layout_marginLeft="170dp"
-            />
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/Button"
+            android:text="Cancel"
+            android:textSize="20dp" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
