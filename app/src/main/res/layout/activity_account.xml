@@ -47,23 +47,23 @@
             android:hint="masukkan nama"
             android:padding="10dp"
             android:textColor="@color/black" />
+
         <TextView
             android:id="@+id/txt_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email :"
-            android:fontFamily="serif"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="30dp"
             android:layout_below="@+id/ed_nama_profile"
-            />
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:text="Nomor Telfon :"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
         <EditText
-            android:id="@+id/ed_email"
+            android:id="@+id/ed_number_phone_account"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:hint="masukkan email"
+            android:hint="masukkan nomor telfon"
             android:padding="10dp"
             android:layout_centerHorizontal="true"
             android:textColor="@color/black"
@@ -81,7 +81,7 @@
             android:textColor="@color/black"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="30dp"
-            android:layout_below="@+id/ed_email"/>
+            android:layout_below="@+id/ed_number_phone_account"/>
 
         <EditText
             android:id="@+id/ed_address"

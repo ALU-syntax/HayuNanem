@@ -17,7 +17,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class AccountActivity extends AppCompatActivity {
 
-    private EditText edNama, edEmail, edNumberPhone, edAddress;
+    private EditText edNama, edNumberPhone, edAddress;
     private Button btnSubmit, btnCancel;
     private FirebaseAuth auth;
     private FirebaseFirestore firestore;
@@ -29,8 +29,7 @@ public class AccountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_account);
 
         edNama = findViewById(R.id.ed_nama_profile);
-        edEmail = findViewById(R.id.ed_email);
-        edNumberPhone = findViewById(R.id.ed_number_phone);
+        edNumberPhone = findViewById(R.id.ed_number_phone_account);
         edAddress = findViewById(R.id.ed_address);
         btnCancel = findViewById(R.id.btn_cancel);
         btnSubmit = findViewById(R.id.btn_change_password);
@@ -45,8 +44,8 @@ public class AccountActivity extends AppCompatActivity {
                 if (task.isSuccessful()){
                     if (task.getResult().exists()){
                         String name = task.getResult().getString("Nama");
-                        String address = task.getResult().getString("Alamat");
-                        String noPhone = task.getResult().getString("Nomor Telfon");
+                        String address = task.getResult().getString("Alamat").toString();
+                        String noPhone = task.getResult().getString("Nomor Telfon").toString();
 
                         edNama.setText(name);
                         edNumberPhone.setText(noPhone);
