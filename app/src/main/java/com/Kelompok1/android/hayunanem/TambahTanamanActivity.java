@@ -21,8 +21,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -32,7 +34,7 @@ import java.util.Locale;
 
 public class TambahTanamanActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    private EditText edNamaTanaman, edTanggalTanam;
+    private EditText edNamaTanaman;
     private Spinner spJenisTanaman;
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
@@ -50,7 +52,6 @@ public class TambahTanamanActivity extends AppCompatActivity implements AdapterV
 
         edNamaTanaman = findViewById(R.id.ed_nama_tanaman);
         spJenisTanaman = findViewById(R.id.sp_jenis_tanaman);
-        edTanggalTanam = findViewById(R.id.ed_tanggal_tanam);
         btnSubmit = findViewById(R.id.btn_submit);
 
         firestore = FirebaseFirestore.getInstance();
@@ -73,25 +74,18 @@ public class TambahTanamanActivity extends AppCompatActivity implements AdapterV
         spJenisTanaman.setAdapter(dataAdapter);
 
 
-        edTanggalTanam.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDateDialog();
-            }
-        });
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String namaTanaman = edNamaTanaman.getText().toString();
-                String tanggalTanam = edTanggalTanam.getText().toString();
                 String jenisTanaman = String.valueOf(spJenisTanaman.getSelectedItem());
-                if (!namaTanaman.isEmpty() && !tanggalTanam.isEmpty() && !jenisTanaman.isEmpty()){
+                if (!namaTanaman.isEmpty() &&!jenisTanaman.isEmpty()){
                     HashMap<String, Object> postMap = new HashMap<>();
-                    postMap.put("Nama Tanaman", namaTanaman);
-                    postMap.put("Tanggal Tanam", tanggalTanam);
-                    postMap.put("Jenis Tanaman", jenisTanaman);
-                    postMap.put("User", currentUserId);
+                    postMap.put("tempat", namaTanaman);
+                    postMap.put("jenis", jenisTanaman);
+                    postMap.put("user", currentUserId);
+                    postMap.put("time", FieldValue.serverTimestamp());
 
                     firestore.collection("Tanaman").add(postMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
                         @Override
@@ -110,19 +104,6 @@ public class TambahTanamanActivity extends AppCompatActivity implements AdapterV
         });
     }
 
-    private void showDateDialog(){
-        Calendar calendar = Calendar.getInstance();
-
-        datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                Calendar newDate = Calendar.getInstance();
-                newDate.set(year, month, dayOfMonth);
-                edTanggalTanam.setText(dateFormatter.format(newDate.getTime()));
-            }
-        }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
-        datePickerDialog.show();
-    }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

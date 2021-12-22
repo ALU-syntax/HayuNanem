@@ -40,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
                         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         break;
 
-                    case R.id.nav_reminder:
-                        fragment = new ReminderFragment();
-                        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
-                        break;
+//                    case R.id.nav_reminder:
+//                        fragment = new ReminderFragment();
+//                        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+//                        break;
 
                     case R.id.nav_market:
                         fragment = new MarketListFragment();

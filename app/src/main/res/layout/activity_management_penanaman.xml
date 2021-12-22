@@ -13,10 +13,12 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:textStyle="bold"
             android:gravity="center"
             android:text="Management Penanaman"
             android:textColor="@color/black"
@@ -30,31 +32,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
-        <ImageButton
-            android:id="@+id/btn_edit"
-            android:layout_width="100dp"
-            android:layout_height="70dp"
-            android:layout_below="@+id/recyler_taneman"
-            android:layout_marginLeft="250dp"
-            android:src="@drawable/deleted"
-            android:scaleType="centerInside"
-            />
-        <ImageButton
-            android:id="@+id/btn_delete"
-            android:layout_width="100dp"
-            android:layout_height="70dp"
-            android:layout_below="@+id/recyler_taneman"
-            android:layout_marginLeft="80dp"
-            android:src="@drawable/edittt"
-            android:scaleType="centerInside"
-            />
+
+<!--        <androidx.core.widget.NestedScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"/>-->
+
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:id="@+id/recyler_taneman"
+            android:id="@+id/recyler_tanaman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="85dp"
             android:layout_marginEnd="15dp"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="30dp" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

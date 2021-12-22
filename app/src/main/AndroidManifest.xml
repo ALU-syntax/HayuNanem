@@ -14,9 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HayuNanem">
         <activity
-            android:name=".SetUpActivity"
+            android:name=".UpdateTanamanActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity
+            android:name=".SetUpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".LoginActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />

@@ -4,14 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardElevation="20dp">
+
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_managemen_penanaman"
+            >
             <TextView
                 android:id="@+id/nama_tanaman"
                 android:layout_width="wrap_content"
@@ -30,16 +28,18 @@
                 android:layout_toRightOf="@+id/nama_tanaman"
                 android:text="1/11/2021"
                 android:textColor="@color/black"/>
+
             <TextView
+                android:id="@+id/tgl_akhir_tanam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/tgl_awal_tanam"
                 android:layout_marginLeft="80dp"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@+id/nama_tanaman"
-                android:layout_below="@id/tgl_awal_tanam"
                 android:text="21/11/2021"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black" />
+
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
