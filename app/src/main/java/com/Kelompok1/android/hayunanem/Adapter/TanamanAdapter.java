@@ -69,6 +69,10 @@ public class TanamanAdapter extends RecyclerView.Adapter<TanamanAdapter.TanamanV
         String date = DateFormat.format("MM/dd/yyyy", new Date(milliseconds)).toString();
         holder.setTglTanam(date);
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         //delete Button
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -9,7 +9,6 @@ import android.view.MenuItem;
 
 import com.Kelompok1.android.hayunanem.Fragment.HomeFragment;
 import com.Kelompok1.android.hayunanem.Fragment.MarketListFragment;
-import com.Kelompok1.android.hayunanem.Fragment.ReminderFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -40,10 +39,6 @@ public class MainActivity extends AppCompatActivity {
                         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         break;
 
-//                    case R.id.nav_reminder:
-//                        fragment = new ReminderFragment();
-//                        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
-//                        break;
 
                     case R.id.nav_market:
                         fragment = new MarketListFragment();
