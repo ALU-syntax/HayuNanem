@@ -99,11 +99,9 @@ public class UpdateTanamanActivity extends AppCompatActivity implements AdapterV
             spJenisTanaman.setSelection(1);
         }
 
-<<<<<<< Updated upstream
-=======
 
 
->>>>>>> Stashed changes
+        //btn submit
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

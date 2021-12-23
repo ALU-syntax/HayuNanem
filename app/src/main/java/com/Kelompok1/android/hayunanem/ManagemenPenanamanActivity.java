@@ -60,69 +60,55 @@ public class ManagemenPenanamanActivity extends AppCompatActivity {
         tanamanAdapter = new TanamanAdapter(tanamanList, this);
         recyclerView.setAdapter(tanamanAdapter);
 
-<<<<<<< Updated upstream
-        if (auth.getCurrentUser() != null){
-=======
-//        loadRecyclerViewData();
 
         if (auth.getCurrentUser() != null) {
->>>>>>> Stashed changes
 
-            recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-                @Override
-                public void onScrolled(@NonNull @NotNull RecyclerView recyclerView, int dx, int dy) {
-                    super.onScrolled(recyclerView, dx, dy);
-                    Boolean isBottom = !recyclerView.canScrollVertically(1);
-                    if (isBottom) {
-                        Toast.makeText(ManagemenPenanamanActivity.this, "Reached Bottom", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-            query = firestore.collection("Tanaman").orderBy("time", Query.Direction.DESCENDING);
-            listenerRegistration = query.addSnapshotListener(ManagemenPenanamanActivity.this, new EventListener<QuerySnapshot>() {
-                @Override
-                public void onEvent(@Nullable @org.jetbrains.annotations.Nullable QuerySnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
-                    for (DocumentChange doc : value.getDocumentChanges()) {
-                        if (doc.getType() == DocumentChange.Type.ADDED) {
-                            String tanamanId = doc.getDocument().getId();
-                            Tanaman post = doc.getDocument().toObject(Tanaman.class).withId(tanamanId);
-                            post.setTanamanId(tanamanId);
-                            String postUserId = doc.getDocument().getString("user");
-                            firestore.collection("Users").document(postUserId).get()
-                                    .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                                        @Override
-                                        public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
-<<<<<<< Updated upstream
-                                            if (task.isSuccessful()){
-=======
-                                            if (task.isSuccessful()) {
-//                                                Users users = task.getResult().toObject(Users.class);
-//                                                usersList.add(users);
->>>>>>> Stashed changes
-                                                tanamanList.add(post);
+//        loadRecyclerViewData();
 
-                                                tanamanAdapter.notifyDataSetChanged();
-                                            } else {
-                                                Toast.makeText(ManagemenPenanamanActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                                            }
-                                        }
-                                    });
-                        } else {
-                            tanamanAdapter.notifyDataSetChanged();
+            if (auth.getCurrentUser() != null) {
+
+                recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+                    @Override
+                    public void onScrolled(@NonNull @NotNull RecyclerView recyclerView, int dx, int dy) {
+                        super.onScrolled(recyclerView, dx, dy);
+                        Boolean isBottom = !recyclerView.canScrollVertically(1);
+                        if (isBottom) {
+                            Toast.makeText(ManagemenPenanamanActivity.this, "Reached Bottom", Toast.LENGTH_SHORT).show();
                         }
                     }
-<<<<<<< Updated upstream
-                    listenerRegistration.remove();
-                }
-            });
+                });
+                query = firestore.collection("Tanaman").orderBy("time", Query.Direction.DESCENDING);
+                listenerRegistration = query.addSnapshotListener(ManagemenPenanamanActivity.this, new EventListener<QuerySnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable @org.jetbrains.annotations.Nullable QuerySnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
+                        for (DocumentChange doc : value.getDocumentChanges()) {
+                            if (doc.getType() == DocumentChange.Type.ADDED) {
+                                String tanamanId = doc.getDocument().getId();
+                                Tanaman post = doc.getDocument().toObject(Tanaman.class).withId(tanamanId);
+                                post.setTanamanId(tanamanId);
+                                String postUserId = doc.getDocument().getString("user");
+                                firestore.collection("Users").document(postUserId).get()
+                                        .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                            @Override
+                                            public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
+                                                if (task.isSuccessful()) {
+                                                    tanamanList.add(post);
+
+                                                    tanamanAdapter.notifyDataSetChanged();
+                                                } else {
+                                                    Toast.makeText(ManagemenPenanamanActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                                }
+                                            }
+                                        });
+                            } else {
+                                tanamanAdapter.notifyDataSetChanged();
+                            }
+                        }
+
+                        listenerRegistration.remove();
+                    }
+                });
+            }
         }
     }
 }
-=======
-                }
-            });
-        }
-
-    }
-    }
->>>>>>> Stashed changes

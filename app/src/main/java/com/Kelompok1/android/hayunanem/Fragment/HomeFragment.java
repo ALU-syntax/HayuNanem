@@ -1,9 +1,7 @@
 package com.Kelompok1.android.hayunanem.Fragment;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.net.wifi.ScanResult;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +21,6 @@ import com.Kelompok1.android.hayunanem.LoginActivity;
 import com.Kelompok1.android.hayunanem.ManagemenPenanamanActivity;
 import com.Kelompok1.android.hayunanem.PanduanActivity;
 import com.Kelompok1.android.hayunanem.R;
-import com.Kelompok1.android.hayunanem.RiwayatPanenActivity;
 import com.Kelompok1.android.hayunanem.SetUpActivity;
 import com.Kelompok1.android.hayunanem.TambahTanamanActivity;
 import com.google.android.gms.tasks.OnCompleteListener;

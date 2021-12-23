@@ -31,9 +31,6 @@
             android:name=".AccountActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".RiwayatPanenActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity
             android:name=".TambahTanamanActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
