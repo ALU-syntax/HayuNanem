@@ -58,6 +58,7 @@ public class HomeFragment extends Fragment {
         firestore = FirebaseFirestore.getInstance();
         Uid = mAuth.getCurrentUser().getUid();
 
+        //method untuk memanggil data yang ada dicollection Users
         firestore.collection("Users").document(Uid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -75,6 +76,7 @@ public class HomeFragment extends Fragment {
 
     }
 
+    //method inisialisasi untuk didalam view
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -88,6 +90,7 @@ public class HomeFragment extends Fragment {
         btnManagemenPenanaman = view.findViewById(R.id.btn_managemen);
         btnPanduanPenanaman = view.findViewById(R.id.btn_panduan);
 
+        //method click button logout
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,6 +101,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        //method click button Account
         btnAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,6 +109,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        //method click button informasi
         btnInformation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,6 +117,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        //method click button tambah tanaman
         btnTambahTanaman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,6 +125,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        //method click button management penanaman
         btnManagemenPenanaman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -126,6 +133,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        //method click button panduan penanaman
         btnPanduanPenanaman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,6 +141,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        //method click button riwayat panen
         btnRiwayatPanen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -141,6 +150,7 @@ public class HomeFragment extends Fragment {
         });
     }
 
+    //method create inisialisasi layout
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -150,6 +160,7 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
+    //method yang akan dijalankan ketika activity baru dimulai
     @Override
     public void onStart() {
         super.onStart();

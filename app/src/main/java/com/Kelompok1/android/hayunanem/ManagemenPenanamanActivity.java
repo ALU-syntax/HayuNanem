@@ -60,10 +60,7 @@ public class ManagemenPenanamanActivity extends AppCompatActivity {
         tanamanAdapter = new TanamanAdapter(tanamanList, this);
         recyclerView.setAdapter(tanamanAdapter);
 
-//        loadRecyclerViewData();
-
         if (auth.getCurrentUser() != null){
-
 
             recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
                 @Override
@@ -90,8 +87,6 @@ public class ManagemenPenanamanActivity extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull @NotNull Task<DocumentSnapshot> task) {
                                             if (task.isSuccessful()){
-//                                                Users users = task.getResult().toObject(Users.class);
-//                                                usersList.add(users);
                                                 tanamanList.add(post);
 
                                                 tanamanAdapter.notifyDataSetChanged();
@@ -104,68 +99,9 @@ public class ManagemenPenanamanActivity extends AppCompatActivity {
                             tanamanAdapter.notifyDataSetChanged();
                         }
                     }
-//                    listenerRegistration.remove();
+                    listenerRegistration.remove();
                 }
             });
         }
-
-//        if (Uid.equals(auth.getCurrentUser())){
-//            query = firestore.collection("Tanaman").orderBy("time",
-//                    Query.Direction.DESCENDING);
-//            listenerRegistration = query.addSnapshotListener(ManagemenPenanamanActivity.this, new EventListener<QuerySnapshot>() {
-//                @Override
-//                public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-//                    for (DocumentChange doc : value.getDocumentChanges()){
-//                        if (doc.getType() == DocumentChange.Type.ADDED){
-//                            String tanamanId = doc.getDocument().getId();
-//                            tanaman = doc.getDocument().toObject(Tanaman.class).withId(tanamanId);
-//                            firestore.collection("Tanaman").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//                                @Override
-//                                public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                                    if (task.isSuccessful()){
-//                                        tanamanList.add(tanaman);
-//
-//                                    }else{
-//                                        Toast.makeText(ManagemenPenanamanActivity.this,
-//                                                task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-//                                    }
-//                                }
-//                            });
-//                        }else{
-//                            tanamanAdapter.notifyDataSetChanged();
-//                        }
-//                        tanamanAdapter.notifyDataSetChanged();
-//                    }
-//                    listenerRegistration.remove();
-//                }
-//            });
-//        }
     }
-//    private void loadRecyclerViewData(){
-//        firestore.collection("Tanaman").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//            @Override
-//            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                if (!queryDocumentSnapshots.isEmpty()){
-//                    List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
-//                    for(DocumentSnapshot d : list){
-//                        Tanaman tanaman = d.toObject(Tanaman.class);
-//                        tanamanList.add(tanaman);
-//
-//
-//                    }
-//                    tanamanAdapter.notifyDataSetChanged();
-//                }else{
-//                    Toast.makeText(ManagemenPenanamanActivity.this,
-//                            "Tidak ada data penanaman", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        }).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//                Toast.makeText(ManagemenPenanamanActivity.this,
-//                        "Fail to get the data", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//    }
-
 }

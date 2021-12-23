@@ -45,6 +45,7 @@ public class TanamanAdapter extends RecyclerView.Adapter<TanamanAdapter.TanamanV
         this.context = context;
     }
 
+    //method untuk membuat inisialisasi pertama seperti view & database
     @NonNull
     @Override
     public TanamanViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -54,6 +55,7 @@ public class TanamanAdapter extends RecyclerView.Adapter<TanamanAdapter.TanamanV
         return new TanamanViewHolder(v) ;
     }
 
+    //method binding data setiap widget yang sudah dideklarasikan
     @Override
     public void onBindViewHolder(@NonNull TanamanViewHolder holder, int position) {
         Tanaman tanaman = mList.get(position);
@@ -62,27 +64,10 @@ public class TanamanAdapter extends RecyclerView.Adapter<TanamanAdapter.TanamanV
         holder.setNamaTanaman(tanaman.getTempat());
         holder.setJenisTanaman(tanaman.getJenis());
 
-
+        //edit
         long milliseconds = tanaman.getTime().getTime();
         String date = DateFormat.format("MM/dd/yyyy", new Date(milliseconds)).toString();
         holder.setTglTanam(date);
-
-//        long milliseconds = tanaman.getWaktuTanam().getTime();
-//        String date = DateFormat.format("MM/dd/yyyy", new Date(milliseconds)).toString();
-//        holder.setTglTanam(date);
-
-//        firestore.collection("Tanaman").document(currentUserId).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-//                String namaTempat = task.getResult().getString("Nama Tanaman");
-//                String jenisTanaman = task.getResult().getString("Jenis Tanaman");
-//                String tglTanam = task.getResult().getString("Tanggal Tanam");
-//
-//                holder.setNamaTanaman(namaTempat);
-//                holder.setJenisTanaman(jenisTanaman);
-//                holder.setTglTanam(tglTanam);
-//            }
-//        });
 
         //delete Button
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
@@ -116,14 +101,15 @@ public class TanamanAdapter extends RecyclerView.Adapter<TanamanAdapter.TanamanV
             }
         });
 
-
     }
 
+    //untuk menampilkan semua isi database
     @Override
     public int getItemCount() {
         return mList.size();
     }
 
+    //kelas view holder untuk inisialisasi widget yang ditampilkan
     public class TanamanViewHolder extends RecyclerView.ViewHolder{
         TextView txtTempat, txtTglTanam,  txtJenisTanaman;
         Button btnEdit, btnDelete;

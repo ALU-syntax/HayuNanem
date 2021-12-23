@@ -38,6 +38,7 @@ public class AccountActivity extends AppCompatActivity {
         firestore = FirebaseFirestore.getInstance();
         UID = auth.getCurrentUser().getUid();
 
+        //method unutk get data dari database yang berada dalam collection Users
         firestore.collection("Users").document(UID).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {

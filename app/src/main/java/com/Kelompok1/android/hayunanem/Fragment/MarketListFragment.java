@@ -48,6 +48,7 @@ public class MarketListFragment extends Fragment {
         btnImgMarket2 = view.findViewById(R.id.btnImg_market2);
         btnImgMarket3 = view.findViewById(R.id.btnImg_market3);
 
+        //method onclick untuk pop up
         btnImgMarket1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,6 +56,7 @@ public class MarketListFragment extends Fragment {
                 mDialog.show();
             }
         });
+
         btnImgMarket2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

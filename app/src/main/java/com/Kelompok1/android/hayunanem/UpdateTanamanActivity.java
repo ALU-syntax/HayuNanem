@@ -99,39 +99,12 @@ public class UpdateTanamanActivity extends AppCompatActivity implements AdapterV
             spJenisTanaman.setSelection(1);
         }
 
-
-
-//        firestore.collection("Tanaman").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//            @Override
-//            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                if(!queryDocumentSnapshots.isEmpty()){
-//                    List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
-//                    for (DocumentSnapshot d : list){
-//                        Tanaman t = d.toObject(Tanaman.class);
-//                        t.setTanamanId(d.getId());
-//
-//                        edNamaTanaman.setText(t.getTempat().toString());
-//                        edTanggalTanam.setText(t.getWaktuTanam().toString());
-//                        String jenisTanaman = t.getJenis();
-//                        if (jenisTanaman.equals("Kangkung")){
-//                            spJenisTanaman.setSelection(0);
-//                        }else{
-//                            spJenisTanaman.setSelection(1);
-//                        }
-//                    }
-//                }
-//
-//            }
-//        });
-
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String namaTanaman = edNamaTanaman.getText().toString();
                 String jenisTanaman = String.valueOf(spJenisTanaman.getSelectedItem());
                 Date waktu = tanaman.getTime();
-                SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-                Date tglTanam = null;
 
                 if (!namaTanaman.isEmpty() && !jenisTanaman.isEmpty()){
                     updateTanaman(tanaman, namaTanaman, jenisTanaman, currentUserId, waktu);

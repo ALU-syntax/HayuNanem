@@ -43,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                 String email = edEmail.getText().toString();
                 String pass = edPassword.getText().toString();
 
+                //pengecekan jika email
                 if (!email.isEmpty() && !pass.isEmpty()){
                     auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
