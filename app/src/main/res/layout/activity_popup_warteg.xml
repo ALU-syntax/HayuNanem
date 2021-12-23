@@ -19,7 +19,7 @@
             android:id="@+id/txt_warteg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Warteg Mang Uyah"
+            android:text="Warteg Kharisma"
             android:layout_below="@+id/img_warteg"
             android:textColor="@color/black"
             android:gravity="center"

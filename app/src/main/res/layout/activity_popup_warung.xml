@@ -10,41 +10,42 @@
 
     <ImageView
         android:id="@+id/img_warteg"
+        android:src="@drawable/warung"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:src="@drawable/warung"/>
+        />
     <TextView
         android:id="@+id/txt_warteg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Warteg Mang Uyah"
-        android:layout_below="@+id/img_warteg"
+        android:text="Warung Kabayan"
         android:textColor="@color/black"
         android:gravity="center"
-        android:textSize="25dp"/>
+        android:textSize="25dp"
+        android:layout_below="@+id/img_warteg"/>
     <TextView
         android:id="@+id/txt_kebutuhan_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Kebutuhan : Kangkung 1kg per-Hari"
-        android:layout_below="@+id/txt_warteg"
         android:textSize="10dp"
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
+        android:layout_below="@+id/txt_warteg"
         />
     <TextView
         android:id="@+id/txt_kebutuhan_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Kebutuhan : Sawi 2kg per-Hari"
-        android:layout_below="@+id/txt_kebutuhan_1"
         android:textSize="10dp"
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
+        android:layout_below="@+id/txt_kebutuhan_1"
         />
     <TextView
         android:id="@+id/kebutuhan_3"

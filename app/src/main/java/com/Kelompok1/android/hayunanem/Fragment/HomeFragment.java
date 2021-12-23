@@ -137,14 +137,6 @@ public class HomeFragment extends Fragment {
                 startActivity(new Intent(getActivity(), PanduanActivity.class));
             }
         });
-
-        //method click button riwayat panen
-        btnRiwayatPanen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), RiwayatPanenActivity.class));
-            }
-        });
     }
 
     //method create inisialisasi layout
