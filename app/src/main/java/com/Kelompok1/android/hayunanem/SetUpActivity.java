@@ -30,11 +30,13 @@ public class SetUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_up);
 
+        //initiate database
         firestore = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
 
         Uid = auth.getCurrentUser().getUid();
 
+        //initiate all widget
         edName = findViewById(R.id.ed_nama);
         edNmbrPhone = findViewById(R.id.ed_number_phone);
         edAddress = findViewById(R.id.ed_address);
